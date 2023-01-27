@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Authors</title>
+</head>
+<body>
+    <a href="{% url "author-create" %}"> add a new author </a>
+    <ul>
+        {% for author in authors %}
+            <li><a href="{% url "author-detail" author.pk %}">{{ author }} </a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
